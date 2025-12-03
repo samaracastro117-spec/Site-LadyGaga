@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planetário de Brasília Luiz Cruls</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth; /* Para rolagem suave entre as seções */
+        }
+
+       /* Estilo do banner */
+       .banner {
+            background-color: #1c2e68; 
+            background-image: url(https://secti.df.gov.br/wp-conteudo/uploads/2017/09/WhatsApp-Image-2019-06-29-at-11.53.43-1-768x432.jpeg);
+            background-size: cover; /* Para cobrir todo o fundo */
+            background-position: center; /* Para centralizar a imagem */
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 30px;
+            /* Sombra no texto */
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8), -3px -3px 5px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Estilo do menu principal */
+        .menu-principal {
+            background-color: #333;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .menu-principal a {
+            display: inline-block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .menu-principal a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+                /* Estilo para as opções de idioma */
+                .menu-linguas {
+            float: right;
+        }
+
+        .menu-linguas a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .menu-linguas a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Estilos das seções */
+        section {
+            padding: 40px 150px;
+            margin-top: 0px;
+            min-height: 100px;
+            background-color: #ffffff;
+        }
+
+         /* Estilos da galeria de imagens */
+        #galeria {
+            display: flex;
+            flex-wrap: wrap; /* Permite que as imagens se ajustem em várias linhas */
+            gap: 10px; /* Espaço entre as imagens */
+            justify-content: space-between; /* Alinha as imagens de forma espaçada */
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        .flex-container div {
+            flex: 0 1 calc(50% - 10px); /* A largura de cada imagem é 50% do container, com espaço de 10px entre elas */
+            box-sizing: border-box;
+        }
+
+        .flex-container img {
+            width: 100%; /* As imagens ocuparão toda a largura do seu container */
+            height: auto; /* Mantém a proporção das imagens */
+            object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+            max-height: 300px; /* Limita a altura das imagens */
+        }
+
+    </style>
+   
+</head>
+<body>
+
+    <!-- Banner -->
+    <div class="banner">
+        <h1>Planetário de Brasília</h1>
+    </div>
+
+    <!-- Menu Principal -->
+    <div class="menu-principal">
+        <a href="#inicio">スタート</a>
+        <a href="#contatos">連絡先</a>
+        <a href="#como-chegar">行き方</a>
+        <a href="#galeria">ギャラリー</a>
+        <a href="#tour-virtual">バーチャルツアー</a>
+
+
+            <!-- Menu de Línguas Embutido (sem dropdown) -->
+            <div class="menu-linguas">
+                <a href="index_pt.html">PT-BR</a>
+                <a href="index_en.html">ENG</a>
+                <a href="index_jp.html">日本語</a>
+            </div>
+    </div>
+
+    <!-- Seção Início -->
+    <section id="inicio">
+        <h2>スタート</h2>
+        <p></p>
+        <p>1974年に設立されたブラジリアのルイス・クルルス・プラネタリウムは、教育と科学普及に特化した環境を持つ公共施設であると同時に、文化的、歴史的、娯楽空間でもある。建物は3階建てで、現在「時空の旅」展が開催されているほか、1階にはドームがあり、天文学、宇宙航行学、宇宙論に関する教育用フィルムが投影されている。</p>
+        <p>連邦管区科学技術イノベーション事務局（Secti-DF）の管轄下にあるこの公共施設は、数十年にわたり、科学的アウトリーチ・プログラム、展示会、映写会などを推進し、来館者がその場所にいながらにして宇宙の不思議を探求できるよう、天文学の普及に努めてきた。</p>
+        <p>モダニズム建築のプラネタリウムは、リオの建築家セルジオ・ベルナルデスによって設計された。その構造は、エイショ・モニュメンタルの芝生に着陸する空飛ぶ円盤を連想させる。</p>
+        <p>ブラジリアのルイス・クルルス・プラネタリウムという名称は、中央高原探査委員会を率いたベルギー人の天文学者兼測地学者にちなんで2021年に導入された。クルルス調査団として知られるこの21人の科学者グループは、将来のブラジルの首都が建設される場所を選び、境界線を引くという任務を担っていた。</p>
+        <h3>追加情報</h3>
+        <p></p>
+        <p>営業時間 火曜日～日曜日 7:30 a.m.～7:00 p.m.（祝日を含む）。</p>
+        <p>ドーム投影時間 火曜から金曜は18時、土曜、日曜、祝日は11時、14時30分、16時、17時、18時。</p>
+        <p>入場料：無料</p>
+        <p>ターゲット層：全年齢</p>
+        <h4>観察：</h4>
+        <ul>
+            <li>現地ガイドあり；</li>
+            <li>敷地内での飲食は禁止；</li>
+            <li>団体、学校などの場合は、電話（61-98199-2692）にて事前予約が必要；</li>
+            <li>アクセシビリティの面では、車椅子用スロープ、アクセス・プラットフォーム、障害者用トイレ、高齢者や障害者用の駐車スペースが用意されている；</li>
+            <li>ドームでの上映は座席数に限りがあるため、早めに到着することをお勧めする。</li>
+        </ul>
+
+    </section>
+
+    <!-- Seção Sobre Nós -->
+    <section id="contatos">
+        <h2>連絡先</h2>
+        <p></p>
+        <ul>
+            <li>電子メール: planetario@secti.df.gov.br</li>
+            <li>電話番号: (61) 98199-2692</li>
+            <li>Instagram: @planetariodebrasilia</li>
+            <li>Youtube: Planetário de Brasília</li>
+        </ul>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="como-chegar">
+        <h2>行き方</h2>
+        <p></p>
+        <p>所在地: Setor de Divulgação Cultural - Via N1 - Eixo Monumental, Brasília - DF, 70070-350;</p>
+        <p>プラネタリウムへは車か、0.006、0.024、0.169、0.874、016.1、100.6、2208、2209、383.1系統のバスを利用する。</p>
+        <div style="text-align: center;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.3076783440283!2d-47.899080299999994!3d-15.787722400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3af46f8174db%3A0x2ede7fe61bd24168!2sPlanet%C3%A1rio%20de%20Bras%C3%ADlia!5e0!3m2!1sen!2sbr!4v1726429573786!5m2!1sen!2sbr" title="Google Maps map" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe>
+        </div>
+    </section>
+
+    <!-- Seção Galeria -->
+    <section id="galeria">
+        <h2>Galeria</h2>
+        <div class="flex-container">
+            <!-- Imagens -->
+            <div><img src="https://secti.df.gov.br/wp-conteudo/uploads/2017/09/WhatsApp-Image-2019-06-29-at-11.53.43-1-768x432.jpeg" alt="Vista aérea do Planetário de Brasília."></div>
+            <div><img src="https://www.agenciabrasilia.df.gov.br/wp-conteudo/uploads/2024/03/WhatsApp-Image-2024-03-14-at-10.52.35-1536x1023.jpeg" alt="Vista térrea do Planetário de Brasília."></div>
+            <div><img src="https://www.agenciabrasilia.df.gov.br/wp-conteudo/uploads/2023/06/7.6.-Planetario-de-Brasilia.-Foto-Lucio-Bernardo-Jr.-Agencia-Brasilia-1536x1020.jpeg" alt="Foto do túnel presente no Planetário."></div>
+            <div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Planet%C3%A1rio_de_Bras%C3%ADlia_15.jpg/800px-Planet%C3%A1rio_de_Bras%C3%ADlia_15.jpg" alt="Foto da exposição Missão Centenário no Planetário de Brasília."></div>
+            </div>
+    </section>
+
+    <section id="tour-virtual">
+        <h2>バーチャルツアー</h2>
+        <p></p>
+        <p>ブラジリア・プラネタリウムの簡単なバーチャルツアーをご覧ください！</p>
+        <div style="text-align: center;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kUGfl_rXOlY?si=dI5hduux1-2_Tl0H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lady Gaga: Voz, Moda e Liberdade 
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Open+Sans:wght@400&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Variáveis de Cores */
+        :root {
+            --color-glam-black: #000000; /* Preto Glam */
+            --color-pure-white: #FFFFFF; /* Branco Puro */
+
+            /* Tipografia */
+            --font-h1: 'Montserrat', sans-serif;
+            --font-h2: 'Montserrat', sans-serif;
+            --font-body: 'Montserrat', sans-serif;
+        }
+
+        /* Estilos Globais e Reset Simples */
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-glam-black);
+            color: var(--color-pure-white);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        
+        
+        h2 {
+            font-family: var(--font-h2);
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--color-electric-blue);
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--color-neon-pink);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        p {
+            font-size: 18px; /* Corpo (16-18px) */
+            color: var(--color-pure-white);
+        }
+
+        a {
+            color: var(--color-neon-pink);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--color-electric-blue);
+        }
+
+        /* --- Header / Navegação --- */
+
+        .header-topbar {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 10px 0;
+            border-bottom: 1px solid var(--color-metallic-gray);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .topbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .language-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .language-nav li {
+            margin-left: 15px;
+        }
+
+        .language-nav a {
+            font-family: var(--font-h2);
+            font-weight: 600;
+            color: var(--color-metallic-gray);
+            font-size: 18px;
+        }
+
+        .language-nav a:hover,
+        .language-nav .active {
+            color: var(--color-neon-pink);
+        }
+
+        .accessibility-controls button {
+            background-color: var(--color-electric-blue);
+            color: var(--color-pure-white);
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-family: var(--font-h2);
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-left: 10px;
+        }
+
+        .accessibility-controls button:hover {
+            background-color: var(--color-neon-pink);
+        }
+
+        /* Menu Principal */
+        .main-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .main-nav a {
+            font-family: var(--font-h2);
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--color-pure-white);
+            padding: 5px 10px;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        .main-nav a:hover {
+            color: var(--color-neon-pink);
+            border-bottom: 3px solid var(--color-electric-blue);
+        }
+
+        /* --- Seção Início / Banner --- */
+        .hero-banner {
+            background-image: url('placeholder-banner-rio-1920x1080.jpg'); /* Sugestão de Imagem */
+            background-size: cover;
+            background-position: center;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgb(0, 0, 0); /* Overlay escuro */
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .banner-content h1 {
+            text-shadow: 0 0 10px var(--color-electric-blue), 0 0 20px var(--color-neon-pink);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--color-neon-pink);
+            color: var(--color-glam-black);
+            padding: 15px 30px;
+            font-family: var(--font-h2);
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 50px;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.2s;
+            text-transform: uppercase;
+            box-shadow: 0 0 15px var(--color-neon-pink);
+        }
+
+        .cta-button:hover {
+            background-color: var(--color-electric-blue);
+            color: var(--color-pure-white);
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px var(--color-electric-blue);
+        }
+
+        /* --- Seção de Destaque --- */
+        .section-highlight {
+            padding: 60px 0;
+        }
+
+        .section-highlight p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--color-metallic-gray);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #1a1a1a;
+            color: var(--color-metallic-gray);
+            text-align: center;
+            padding: 20px 0;
+            border-top: 3px solid var(--color-neon-pink);
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: var(--color-electric-blue);
+        }
+
+        /* Layout Responsivo Básico */
+        @media (max-width: 768px) {
+            .topbar-content {
+                flex-direction: column;
+            }
+            .language-nav {
+                margin-bottom: 10px;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            h2 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body class="theme-dark">
+
+    <header>
+        <div class="header-topbar">
+            <div class="container topbar-content">
+                <nav class="language-nav">
+                    <ul>
+                        <li><a href="#" class="active">PT</a></li>
+                        <li><a href="#">EN</a></li>
+                        <li><a href="#">ES</a></li>
+                    </ul>
+                </nav>
+
+                <div class="accessibility-controls">
+                    <button id="themeToggle" aria-label="Alternar Tema Claro/Escuro">Contraste</button>
+                    <button id="aumentarFonte" aria-label="Aumentar Fonte">A+</button>
+                    <button id="diminuirFonte" aria-label="Diminuir Fonte">A-</button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#lgbtqia">LGBTQIA+</a></li>
+                    <li><a href="#moda">Moda e Expressão</a></li>
+                    <li><a href="#rio">Show no Rio</a></li>
+                    <li><a href="#legado">Legado Global</a></li>
+                    <li><a href="#contato">Contato/Créditos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero-banner" role="banner" aria-label="Lady Gaga no Palco, Celebrando com o Público no Rio de Janeiro.">
+            <div class="banner-content">
+                <h1>Lady Gaga: Voz, Moda e Liberdade</h1>
+                <p>O impacto cultural de uma artista que redefiniu o pop, a moda e o ativismo.</p>
+                <a href="#rio" class="cta-button">Reviva o Show Histórico no Rio</a>
+            </div>
+        </section>
+
+        <section class="section-highlight">
+            <div class="container">
+                <h2>A Mother Monster e a Vanguarda Cultural</h2>
+                <p>Desde sua ascensão, Lady Gaga utilizou sua arte como plataforma para desafiar normas e amplificar vozes. Sua relação com a comunidade LGBTQIA+ e sua transformação no universo da moda são pilares de um legado que transcende a música. Explore o design, o ativismo e a energia única que marcou sua passagem pelo Brasil.</p>
+            </div>
+        </section>
+
+        <section id="lgbtqia" class="section-highlight" style="background-color: #0d0d0d;">
+            <div class="container">
+                <h2>Lady Gaga e a Comunidade LGBTQIA+</h2>
+                <p>Uma linha do tempo de ativismo, desde 'Born This Way' até a Born This Way Foundation, com depoimentos de fãs e colaboradores sobre o impacto inspirador da artista. (Conteúdo informativo/visual aqui).</p>
+                <a href="#" style="color: var(--color-electric-blue); font-weight: bold;">Ver Timeline Completa →</a>
+            </div>
+        </section>
+
+        <section id="moda" class="section-highlight">
+            <div class="container">
+                <h2>Moda e Expressão: A Análise Estética</h2>
+                <p>Dos vestidos de carne ao glamour de Hollywood, Gaga é um camaleão da moda. Navegue por uma galeria de looks icônicos, com análise estética e a influência de designers de vanguarda. (Galeria de imagens com thumbnails 400x400 simulada).</p>
+                <div style="display: flex; gap: 15px; margin-top: 20px;">
+                    <div style="width: 120px; height: 120px; background-color: var(--color-metallic-gray);" title="Alt: Look icônico MET Gala"></div>
+                    <div style="width: 120px; height: 120px; background-color: var(--color-metallic-gray);" title="Alt: Look clipe 'Bad Romance'"></div>
+                    <div style="width: 120px; height: 120px; background-color: var(--color-metallic-gray);" title="Alt: Vestido de carne simulado"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="rio" class="section-highlight" style="background-color: #0d0d0d;">
+            <div class="container">
+                <h2>O Impacto do Show no Rio de Janeiro</h2>
+                <p>Reportagem visual completa com imagens do público, a energia do show e o legado deixado na cidade. Uma celebração da liberdade e diversidade. (Vídeo e galeria simulados).</p>
+                <a href="#" class="cta-button" style="background-color: var(--color-electric-blue); box-shadow: 0 0 15px var(--color-electric-blue);">Ver Galeria Completa</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contato">
+        <div class="container">
+            <p>© 2025 Manual de Design — Protótipo Multilíngue. | <a href="#">Fontes e Créditos</a> | Design por [Sua Equipe]</p>
+            <p>Acessibilidade: Teste de contraste WCAG AA/AAA em textos principais.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+            const themeToggle = document.getElementById('themeToggle');
+            const aumentarFonte = document.getElementById('aumentarFonte');
+            const diminuirFonte = document.getElementById('diminuirFonte');
+            const html = document.documentElement;
+
+            // 7. Acessibilidade: Theme toggle (Simulação)
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('theme-dark');
+                // Simulação de transição para tema light (alto contraste)
+                if (body.classList.contains('theme-dark')) {
+                     html.style.setProperty('--color-glam-black', '#000000');
+                     html.style.setProperty('--color-pure-white', '#FFFFFF');
+                     body.style.backgroundColor = '#000000';
+                     body.style.color = '#FFFFFF';
+                } else {
+                     // Exemplo de tema claro para teste (muito alto contraste)
+                     html.style.setProperty('--color-glam-black', '#FFFFFF');
+                     html.style.setProperty('--color-pure-white', '#000000');
+                     body.style.backgroundColor = '#FFFFFF';
+                     body.style.color = '#000000';
+                }
+            });
+
+            // 7. Acessibilidade: Font resize (Simulação)
+            let baseFontSize = 18; // 18px = 1rem base
+            html.style.fontSize = baseFontSize + 'px';
+
+            aumentarFonte.addEventListener('click', () => {
+                if (baseFontSize < 24) {
+                    baseFontSize += 2;
+                    html.style.fontSize = baseFontSize + 'px';
+                }
+            });
+
+            diminuirFonte.addEventListener('click', () => {
+                if (baseFontSize > 14) {
+                    baseFontSize -= 2;
+                    html.style.fontSize = baseFontSize + 'px';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

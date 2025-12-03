@@ -1,0 +1,378 @@
+<!DOCTYPE> html> <html lang="pt"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Lady Gaga: Voz,
+Moda e Liberdade - Protótipo Multilíngue</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Open+Sans:wght@400&family=Poppins:wght@600;700&display=swap" rel="stylesheet"><style>
+
+/* ================================================= */
+/* 3. PALETA DE CORES E VARIÁVEIS CSS */
+/* ================================================= */
+:root {
+    /* Cores Principais */
+    --color-neon-pink: #FF1493;
+    /* Rosa Neon (Destaque) */
+    --color-electric-blue: #007BFF;
+    /* Azul Elétrico */
+    --color-glam-black: #000000;
+    /* Preto Glam (Fundo) */
+    --color-pure-white: #FFFFFF;
+    /* Branco Puro (Texto) */
+    --color-metallic-gray: #B0B0B0;
+    /* Cinza Metálico */
+
+    /* Tipografia */
+    --font-h1: 'Montserrat', sans-serif;
+    --font-h2: 'Poppins', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+
+    /* Base para redimensionamento (7. Acessibilidade) */
+    font-size: 18px;
+    /* Padrão de 18px para o corpo (melhor leitura) */
+}
+
+/* Estilos para o Tema Claro (Alto Contraste) - Simulação */
+body.theme-light {
+    background-color: var(--color-pure-white);
+    color: var(--color-glam-black);
+}
+
+body.theme-light p {
+    color: #333333;
+    /* Cinza escuro para corpo */
+}
+
+body.theme-light .header-topbar {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom-color: #333333;
+}
+
+/* ================================================= */
+/* ESTILOS GLOBAIS / RESET SIMPLES */
+/* ================================================= */
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-glam-black);
+    color: var(--color-pure-white);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ================================================= */
+/* 4. TIPOGRAFIA */
+/* ================================================= */
+h1 {
+    font-family: var(--font-h1);
+    font-size: clamp(2.5rem, 6vw, 3rem);
+    /* 48px/16 = 3rem | 36px/18 = 2rem. Usando 18px base */
+    font-weight: 800;
+    color: var(--color-neon-pink);
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+h2 {
+    font-family: var(--font-h2);
+    font-size: 1.55rem;
+    /* ~28px */
+    font-weight: 700;
+    color: var(--color-electric-blue);
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--color-neon-pink);
+    padding-bottom: 10px;
+    margin-top: 2.2rem;
+}
+
+p {
+    font-size: 1rem;
+    /* 16-18px base */
+    color: var(--color-pure-white);
+}
+
+body.theme-light p {
+    color: #333;
+}
+
+a {
+    color: var(--color-neon-pink);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-electric-blue);
+}
+
+/* ================================================= */
+/* 2. ESTRUTURA E NAVEGAÇÃO */
+/* ================================================= */
+
+.header-topbar {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--color-metallic-gray);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.topbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Menu de idiomas (6. Componentes de UI) */
+.language-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.language-nav li {
+    margin-left: 1rem;
+}
+
+.language-nav a {
+    font-family: var(--font-h2);
+    font-weight: 600;
+    color: var(--color-metallic-gray);
+    font-size: 1rem;
+}
+
+.language-nav a:hover,
+.language-nav .active {
+    color: var(--color-neon-pink);
+}
+
+/* Controles de Acessibilidade (7. Acessibilidade) */
+.accessibility-controls button {
+    background-color: var(--color-electric-blue);
+    color: var(--color-pure-white);
+    border: none;
+    padding: 0.5rem 0.7rem;
+    cursor: pointer;
+    font-family: var(--font-h2);
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-left: 0.5rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.accessibility-controls button:hover {
+    background-color: var(--color-neon-pink);
+}
+
+/* Menu Principal */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.2rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    font-family: var(--font-h2);
+    font-size: 1.1rem;
+    /* ~20px */
+    font-weight: 600;
+    color: var(--color-pure-white);
+    padding: 0.3rem 0.6rem;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+    text-transform: uppercase;
+}
+
+.main-nav a:hover {
+    color: var(--color-neon-pink);
+    border-bottom: 3px solid var(--color-electric-blue);
+}
+
+/* ================================================= */
+/* SEÇÕES / LAYOUT */
+/* ================================================= */
+
+/* 2. Início / 5. Banner */
+.hero-banner {
+    /* Imagem Placeholder - O URL real deve ser substituído por uma imagem de alta resolução */
+    background-image: url('https://via.placeholder.com/1920x1080/000000/FFFFFF?text=BANNER+LADY+GAGA+SHOW+RIO+16%3A9');
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    /* Overlay escuro */
+}
+
+.banner-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    padding: 1rem;
+}
+
+.banner-content h1 {
+    /* Efeito Neon de acordo com o design ousado */
+    text-shadow: 0 0 10px var(--color-electric-blue), 0 0 20px var(--color-neon-pink);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-neon-pink);
+    color: var(--color-glam-black);
+    padding: 0.8rem 1.6rem;
+    font-family: var(--font-h2);
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    margin-top: 1.2rem;
+    transition: background-color 0.3s, transform 0.2s;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px var(--color-neon-pink);
+}
+
+.cta-button:hover {
+    background-color: var(--color-electric-blue);
+    color: var(--color-pure-white);
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px var(--color-electric-blue);
+}
+
+/* Seções de Conteúdo */
+.section-highlight {
+    padding: 3rem 0;
+}
+
+/* 5. Galeria de Imagens (Simulação) */
+.gallery-thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 150px;
+    /* Tamanho ajustado para mobile/desktop */
+    height: 150px;
+    background-color: var(--color-metallic-gray);
+    border: 2px solid var(--color-electric-blue);
+    cursor: pointer;
+    transition: border-color 0.3s, transform 0.2s;
+}
+
+.gallery-item:hover {
+    border-color: var(--color-neon-pink);
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+    background-color: #1a1a1a;
+    color: var(--color-metallic-gray);
+    text-align: center;
+    padding: 1.2rem 0;
+    border-top: 3px solid var(--color-neon-pink);
+    margin-top: 3rem;
+}
+
+footer a {
+    color: var(--color-electric-blue);
+}
+
+/* ================================================= */
+/* RESPONSIVIDADE (4. Tipografia) */
+/* ================================================= */
+@media (max-width: 768px) {
+    .topbar-content {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .language-nav ul {
+        justify-content: center;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .main-nav a {
+        border-bottom: none;
+    }
+
+    .gallery-item {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+</style></head><body class="theme-dark"><header><div class="header-topbar"><div class="container topbar-content"><nav class="language-nav"><ul><li><a href="#" class="active" aria-current="page">PT</a></li><li><a href="#">EN</a></li><li><a href="#">ES</a></li></ul></nav><div class="accessibility-controls"><button id="themeToggle" aria-label="Alternar Tema Claro/Escuro (Alto Contraste)">Contraste</button><button id="aumentarFonte" aria-label="Aumentar Fonte">A+</button><button id="diminuirFonte" aria-label="Diminuir Fonte">A-</button></div></div></div><nav class="main-nav"><div class="container"><ul><li><a href="#inicio">Início</a></li><li><a href="#lgbtqia">LGBTQIA+</a></li><li><a href="#moda">Moda e Expressão</a></li><li><a href="#rio">Show no Rio</a></li><li><a href="#legado">Legado Global</a></li><li><a href="#contato">Contato/Créditos</a></li></ul></div></nav></header><main><section id="inicio" class="hero-banner" role="banner" aria-label="Banner Lady Gaga Show no Rio"><div class="banner-content"><h1>Lady Gaga: Voz,
+Moda e Liberdade</h1><p>O impacto cultural de uma artista que redefiniu o pop,
+a moda e o ativismo.</p><a href="#rio" class="cta-button">Reviva o Show Histórico no Rio</a></div></section><section class="section-highlight"><div class="container"><h2>A Mother Monster e a Vanguarda Cultural</h2><p>Desde sua ascensão,
+Lady Gaga utilizou sua arte como plataforma para desafiar normas e amplificar vozes. Sua relação com a comunidade LGBTQIA+e sua transformação no universo da moda são pilares de um legado que transcende a música. Explore o design,
+o ativismo e a energia única que marcou sua passagem pelo Brasil.</p></div></section><section id="lgbtqia" class="section-highlight" style="background-color: #0c0c0c;"><div class="container"><h2>Lady Gaga e a Comunidade LGBTQIA+</h2><p>Uma linha do tempo de ativismo,
+desde 'Born This Way' até a Born This Way Foundation,
+com depoimentos de fãs e colaboradores sobre o impacto inspirador da artista. O conteúdo informativo e visual será inserido aqui.</p><a href="#" style="color: var(--color-electric-blue); font-weight: bold;">Ver Timeline Completa →</a></div></section><section id="moda" class="section-highlight"><div class="container"><h2>Moda e Expressão: A Análise Estética</h2><p>Dos vestidos de carne ao glamour de Hollywood,
+Gaga é um camaleão da moda. Navegue por uma galeria de looks icônicos com análise estética.</p><div class="gallery-thumbnails"><div class="gallery-item" role="img" aria-label="Look MET Gala Icônico"></div><div class="gallery-item" role="img" aria-label="Look de clipe musical"></div><div class="gallery-item" role="img" aria-label="Imagem de editorial de moda"></div><div class="gallery-item" role="img" aria-label="Look de tapete vermelho polêmico"></div></div></div></section><section id="rio" class="section-highlight" style="background-color: #0c0c0c;"><div class="container"><h2>O Impacto do Show no Rio de Janeiro</h2><p>Reportagem visual completa com imagens do público,
+a energia do show e o legado deixado na cidade. Uma celebração da liberdade e diversidade.</p><a href="#" class="cta-button" style="background-color: var(--color-electric-blue); box-shadow: 0 0 15px var(--color-electric-blue);">Ver Galeria Completa</a></div></section><section id="legado" class="section-highlight"><div class="container"><h2>Legado Global,
+Prêmios e Colaborações</h2><p>Uma visão sobre a carreira de Gaga para além da moda e do ativismo,
+destacando seus principais prêmios e a influência em outros artistas.</p></div></section></main><footer id="contato"><div class="container"><p>© 2025 Manual de Design — Protótipo Multilíngue. | <a href="#">Fontes e Créditos</a>| Design por [Sua Equipe]</p><p>Acessibilidade: Teste de contraste WCAG AA/AAA em textos principais.</p></div></footer><script>document.addEventListener('DOMContentLoaded', ()=> {
+        const body=document.body;
+        const themeToggle=document.getElementById('themeToggle');
+        const aumentarFonte=document.getElementById('aumentarFonte');
+        const diminuirFonte=document.getElementById('diminuirFonte');
+        const root=document.documentElement;
+
+        // Variável CSS para controle de tamanho da fonte (7. Font resize)
+        let baseFontSize=18;
+        root.style.fontSize=baseFontSize + 'px';
+
+        // 7. Theme toggle (Alterna entre Alto Contraste Escuro e Claro)
+        themeToggle.addEventListener('click', ()=> {
+                body.classList.toggle('theme-dark');
+                body.classList.toggle('theme-light');
+            });
+
+        // 7. Font resize (Altera o tamanho da fonte raiz - rem)
+        aumentarFonte.addEventListener('click', ()=> {
+                if (baseFontSize < 24) {
+                    baseFontSize +=2;
+                    root.style.fontSize=baseFontSize + 'px';
+                }
+            });
+
+        diminuirFonte.addEventListener('click', ()=> {
+                if (baseFontSize > 14) {
+                    baseFontSize -=2;
+                    root.style.fontSize=baseFontSize + 'px';
+                }
+            });
+    });
+</script>
+</body>
+</html>
